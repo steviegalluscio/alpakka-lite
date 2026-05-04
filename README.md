@@ -1,5 +1,8 @@
 # Alpakka Lite
 Add *Dual-gyro* and *Thumb-sense* (gyro on/off) to a regular wired XInput gamepad to build an [Input Labs Alpakka](https://inputlabs.io/alpakka) compatible gyro game controller from mostly off-the-shelf components.
+<br>
+<br>
+<br>
 ![Alpakka Lite Banner](alpakka-lite-1280x640.png)
 ### Features:
 - Lightweight (150g)
@@ -9,6 +12,5 @@ Add *Dual-gyro* and *Thumb-sense* (gyro on/off) to a regular wired XInput gamepa
 - Capacitive touch gyro on/off
 - USB host "passthrough" for XInput Gamepads
 - Paddles, capture, and mode buttons working (_only supported for Tegenaria controller_)
-
 ## Disclaimer
 _This project is an independent initiative and is not affiliated with, endorsed by, sponsored by, or otherwise officially connected to Input Labs Oy. All trademarks and registered trademarks are the property of their respective owners._
