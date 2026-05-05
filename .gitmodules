@@ -1,0 +1,3 @@
+[submodule "firmware/alpakka_lite_firmware"]
+	path = firmware/alpakka_lite_firmware
+	url = https://github.com/steviegalluscio/alpakka_firmware
