@@ -4,6 +4,7 @@ Add *Dual-gyro* and *Thumb-sense* (gyro on/off) to a regular wired XInput gamepa
 <br>
 <br>
 ![Alpakka Lite Banner](alpakka-lite-1280x640.png)
+
 ### Features:
 - Lightweight (150g)
 - Low-cost (~$25 USD, See full [BOM](./hardware/BOM.md))
@@ -13,5 +14,11 @@ Add *Dual-gyro* and *Thumb-sense* (gyro on/off) to a regular wired XInput gamepa
 - Capacitive touch gyro on/off
 - USB host "passthrough" for XInput Gamepads
 - Paddles, capture, and mode buttons working (_only supported for Tegenaria controller_)
+
+### Project Links:
+- <a href="https://github.com/steviegalluscio/alpakka_firmware/tree/alpakka-lite" target="_blank">Firmware</a>
+- [Parts List](./hardware/BOM.md)
+- [Wiring Reference](./hardware/WIRING.md)
+
 ## Disclaimer
 _This project is an independent initiative and is not affiliated with, endorsed by, sponsored by, or otherwise officially connected to Input Labs Oy. All trademarks and registered trademarks are the property of their respective owners._
