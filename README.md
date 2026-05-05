@@ -16,7 +16,7 @@ Add *Dual-gyro* and *Thumb-sense* (gyro on/off) to a regular wired XInput gamepa
 - Paddles, capture, and mode buttons working (_only supported for Tegenaria controller_)
 
 ### Project Links:
-- <a href="https://github.com/steviegalluscio/alpakka_firmware/tree/alpakka-lite" target="_blank">Firmware</a>
+- [Firmware Source](https://github.com/steviegalluscio/alpakka_firmware/tree/alpakka-lite)
 - [Parts List](./hardware/BOM.md)
 - [Wiring Reference](./hardware/WIRING.md)
 
