@@ -1,0 +1,58 @@
+name: Firmware Build
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+env:
+  SUBMODULE: ./firmware/alpakka_lite_firmware
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository with submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Import dependency vars
+        working-directory: ${{ env.SUBMODULE }}
+        run: |
+          while read line; do
+            [[ "$line" == "##"* ]] && break
+            [[ "$line" != "" ]] && [[ "$line" != "#"* ]] && echo "$line"
+            [[ "$line" != "" ]] && [[ "$line" != "#"* ]] && echo "$line" >> $GITHUB_ENV
+          done < scripts/install.sh
+
+      - name: Dependencies from cache
+        id: cache-deps
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.SUBMODULE }}/deps/
+          key: pico-sdk_${{ env.SDK_TAG }}_${{ env.ARM_FILENAME_LINUX_X86_64 }}_v4
+
+      - name: Dependencies from internet
+        if: steps.cache-deps.outputs.cache-hit != 'true'
+        working-directory: ${{ env.SUBMODULE }}
+        run: DEVICE=alpakka_lite make install
+
+      - name: Build
+        working-directory: ${{ env.SUBMODULE }}
+        run: |
+          VERSION=$(echo ${GITHUB_REF} | sed 's|refs/tags/||; s|refs/heads/||; s|[.-]|_|g')
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "VERSION=$VERSION"
+          make clean
+          DEVICE=alpakka_lite make
+          mv build/alpakka.uf2 alpakka_lite_${VERSION}.uf2
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: alpakka_artifacts
+          path: |
+            ${{ env.SUBMODULE }}/alpakka_lite_${{ env.VERSION }}.uf2
