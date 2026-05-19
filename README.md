@@ -11,6 +11,7 @@ Add *Dual-gyro* and *Thumb-sense* (gyro on/off) to a regular wired XInput gamepa
 - Alpakka compatible firmware, fully configurable with <a href="https://ctrl.inputlabs.io/" target="_blank">ctrl.inputlabs.io</a>
 - Dual SPI channel support for gyros
 - LSM6DS3 IMU support (cheaper and more available breakout boards than LSM6DSR)
+- LSM6DSV IMU support (better than LSM6DSR)
 - Capacitive touch gyro on/off
 - USB host "passthrough" for XInput Gamepads
 - Paddles, capture, and mode buttons working (_only supported for Tegenaria controller_)
