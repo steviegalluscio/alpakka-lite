@@ -3,7 +3,8 @@
 | Part                          | Description         | Quantity  | Cost (USD)  | Notes                                                                                 |
 | :---------------------------- | :------------------ | :-------- | :---------- | :-------------------------------------------------------------------------------------|
 | Raspberry Pi Pico             | Microcontroller     | 1         | $7          | 2pcs for $14 with overnight delivery                                                  |
-| LSM6DS3 breakout              | IMU sensor          | 2x        | $9 (Total)  | 2pcs for $9 with overnight delivery (LSM6DSR or LSM6DSV is better but less available) |
+| LSM6DSV breakout              | IMU sensor          | 2x        | $16 (Total) | Preferred IMU. I could only find here https://www.aliexpress.us/item/3256811400904011.html|
+| (Alternative) LSM6DS3 breakout| (Alternative) IMU sensor        | (Alternative)2x| $9 (Total)  | 2pcs for $9 with overnight delivery (LSM6DSV is much better but less available)  |
 | GameSir Tegenaria Lite        | XInput gamepad      | 1         | $10-$20     | Found on sale for $10 free shipping (Other XInput controllers can work)               |
 | M3x8mm hex screw              | Touch surface       | 1         | ~$0         | Perfect fit but can be any conductive screw                                           |
 | 100K ohm resistor             | Touch sensor        | 1         | ~$0         | If you don't have one, get a set for ~$4                                              |
@@ -12,4 +13,4 @@
 |[rumble_mount_right.stl](rumble_mount_right.stl)| Right IMU mount  | 1         |  ~$0        |                                                                   |
 
 
-> **Total Cost:** Under $25 USD if you are patient when sourcing.
+> **Total Cost:** Under $25 USD if you are patient when sourcing. Under $50 is very easy.
