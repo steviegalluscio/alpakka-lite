@@ -46,13 +46,19 @@ jobs:
           VERSION=$(echo ${GITHUB_REF} | sed 's|refs/tags/||; s|refs/heads/||; s|[.-]|_|g')
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "VERSION=$VERSION"
+          
+          make clean
+          DEVICE=alpakka_lite_dsv make
+          mv build/alpakka.uf2 alpakka_lite_dsv_${VERSION}.uf2
+          
           make clean
           DEVICE=alpakka_lite make
-          mv build/alpakka.uf2 alpakka_lite_${VERSION}.uf2
+          mv build/alpakka.uf2 alpakka_lite_ds3_${VERSION}.uf2
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: alpakka_artifacts
           path: |
-            ${{ env.SUBMODULE }}/alpakka_lite_${{ env.VERSION }}.uf2
+            ${{ env.SUBMODULE }}/alpakka_lite_dsv_${{ env.VERSION }}.uf2
+            ${{ env.SUBMODULE }}/alpakka_lite_ds3_${{ env.VERSION }}.uf2
