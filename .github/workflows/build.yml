@@ -52,7 +52,7 @@ jobs:
           mv build/alpakka.uf2 alpakka_lite_dsv_${VERSION}.uf2
           
           make clean
-          DEVICE=alpakka_lite make
+          DEVICE=alpakka_lite_ds3 make
           mv build/alpakka.uf2 alpakka_lite_ds3_${VERSION}.uf2
 
       - name: Upload artifacts
