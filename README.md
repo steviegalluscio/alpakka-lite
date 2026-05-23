@@ -1,5 +1,5 @@
 # Alpakka Lite
-Add *Dual-gyro* and *Thumb-sense* (gyro on/off) to a regular wired XInput gamepad to build an [Input Labs Alpakka](https://inputlabs.io/alpakka) compatible gyro game controller from mostly off-the-shelf components.
+Add **Dual-gyro** and **Thumb-sense** (gyro on/off) to a regular wired XInput gamepad to build an [Input Labs Alpakka](https://inputlabs.io/alpakka) compatible gyro game controller from mostly off-the-shelf components.
 <br>
 <br>
 <br>
