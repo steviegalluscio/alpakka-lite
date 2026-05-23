@@ -18,7 +18,7 @@ Add **Dual-gyro** and **Thumb-sense** (gyro on/off) to a regular wired XInput ga
 
 ### Project Links:
 - [Parts List](./hardware/BOM.md)
-- [Build Guide](./GUIDE.md)
+- [Build Guide](./hardware/GUIDE.md)
 - [Wiring Reference](./hardware/WIRING.md)
 - [Firmware Source](https://github.com/steviegalluscio/alpakka_firmware/tree/alpakka-lite)
 
