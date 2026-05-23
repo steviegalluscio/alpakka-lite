@@ -26,7 +26,9 @@
 
 
 
-See also, pins in firmware: https://github.com/steviegalluscio/alpakka_firmware/blob/88f42c9516ef7bdc2893ddaced1abc7dd2f941d2/src/headers/pin.h#L74-L131
+See also:
+- [Build Guide](./GUIDE.md)
+- Pins in firmware: https://github.com/steviegalluscio/alpakka_firmware/blob/88f42c9516ef7bdc2893ddaced1abc7dd2f941d2/src/headers/pin.h#L74-L131
 
 
-![Alpakka Lite Wiring 1](./wiring-1.png)
+![Alpakka Lite Wiring 1](./images/wiring-1.png)
