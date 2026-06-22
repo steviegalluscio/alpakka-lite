@@ -17,4 +17,5 @@
 15) Hold BOOTSEL button, plug in USB cord, and flash firmware by drag and droping the .uf2 file from [releases](https://github.com/steviegalluscio/alpakka-lite/releases). After the intial flash you can use <a href="https://ctrl.inputlabs.io/" target="_blank">ctrl.inputlabs.io</a> to put the controller into BOOTSEL mode and flash updates.
 16) Solder the pins according to [WIRING.md](./WIRING.md). Start with the controller PCB wires along the bottom of the pico first then use a blob of hot glue to hold the pico in place. Curved locking forceps or helping hands will make it easier especially where there are multiple wires sharing a pin. ![Alpakka Lite Wiring](./images/wiring-1.png)
 17) Guide the wires as seen above and take your time when snapping on the back cover to make sure that no wires are pinched and that the paddle buttons are not blocked. Replace screws in back cover.
-18) Enjoy gyro gaming and leave a star :star: on the repo.
+18) Don't forget to switch your gamepad into XInput/Xbox 360 mode. (For Tegenaria hold HOME+X until green light)
+19) Enjoy gyro gaming and leave a star :star: on the repo.
