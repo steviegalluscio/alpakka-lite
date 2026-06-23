@@ -54,7 +54,7 @@ jobs:
 
             echo "Building ${name}"
             make clean
-            DEVICE="$device" "$@" make
+            make DEVICE="$device" "$@"
             mv build/alpakka.uf2 "${name}_${VERSION}.uf2"
           }
 
