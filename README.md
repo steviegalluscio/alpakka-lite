@@ -15,6 +15,7 @@ Add **Dual-gyro** and **Thumb-sense** (gyro on/off) to a regular wired XInput ga
 - Capacitive touch gyro on/off
 - USB host "passthrough" for XInput Gamepads
 - Paddles, capture, and mode buttons working (_only supported for Tegenaria controller_)
+- Improved polling and XInput report scheduling.
 
 ### Project Links:
 - [Parts List](./hardware/BOM.md)
