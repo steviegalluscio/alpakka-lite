@@ -46,14 +46,23 @@ jobs:
           VERSION=$(echo ${GITHUB_REF} | sed 's|refs/tags/||; s|refs/heads/||; s|[.-]|_|g')
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "VERSION=$VERSION"
-          
-          make clean
-          DEVICE=alpakka_lite_dsv make
-          mv build/alpakka.uf2 alpakka_lite_dsv_${VERSION}.uf2
-          
-          make clean
-          DEVICE=alpakka_lite_ds3 make
-          mv build/alpakka.uf2 alpakka_lite_ds3_${VERSION}.uf2
+
+          build_firmware() {
+            local device="$1"
+            local name="$2"
+            shift 2
+
+            echo "Building ${name}"
+            make clean
+            DEVICE="$device" "$@" make
+            mv build/alpakka.uf2 "${name}_${VERSION}.uf2"
+          }
+
+          build_firmware alpakka_lite_dsv alpakka_lite_dsv
+          build_firmware alpakka_lite_dsv alpakka_lite_dsv_375Hz CFG_TICK_FREQUENCY=375 CFG_IMU_TICK_SAMPLES=96
+          build_firmware alpakka_lite_dsv alpakka_lite_dsv_500Hz CFG_TICK_FREQUENCY=500 CFG_IMU_TICK_SAMPLES=64
+          build_firmware alpakka_lite_dsv alpakka_lite_dsv_1000Hz CFG_TICK_FREQUENCY=1000 CFG_IMU_TICK_SAMPLES=14
+          build_firmware alpakka_lite_ds3 alpakka_lite_ds3
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -61,4 +70,7 @@ jobs:
           name: alpakka_artifacts
           path: |
             ${{ env.SUBMODULE }}/alpakka_lite_dsv_${{ env.VERSION }}.uf2
+            ${{ env.SUBMODULE }}/alpakka_lite_dsv_375Hz_${{ env.VERSION }}.uf2
+            ${{ env.SUBMODULE }}/alpakka_lite_dsv_500Hz_${{ env.VERSION }}.uf2
+            ${{ env.SUBMODULE }}/alpakka_lite_dsv_1000Hz_${{ env.VERSION }}.uf2
             ${{ env.SUBMODULE }}/alpakka_lite_ds3_${{ env.VERSION }}.uf2
