@@ -10,7 +10,6 @@ Add **Dual-gyro** and **Thumb-sense** (gyro on/off) to a regular wired XInput ga
 - Low-cost ($25 to $50 USD, See full [BOM](./hardware/BOM.md))
 - Alpakka compatible firmware, fully configurable with <a href="https://ctrl.inputlabs.io/" target="_blank">ctrl.inputlabs.io</a>
 - Dual SPI channel support for gyros
-- LSM6DS3 IMU support (cheaper and more available breakout boards than LSM6DSR)
 - LSM6DSV IMU support (better than LSM6DSR)
 - Capacitive touch gyro on/off
 - USB host "passthrough" for XInput Gamepads
